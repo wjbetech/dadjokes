@@ -20,7 +20,6 @@
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -31,18 +30,20 @@ body {
 
 .display {
   display: flex;
-  width: 100%;
+  width: 85%;
   height: 90vh;
+  margin: 0 auto;
 }
 
 .left-container {
   background-color: var(--purple);
   border-radius: 8px;
-  width: 35%;
+  width: 25%;
   height: 75%;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   font-family: 'Permanent Marker', cursive;
+  z-index: 100;
 }
 
 .left-container {
@@ -72,9 +73,10 @@ body {
 
 .right-container {
   color: var(--grey);
-  margin-top: 100px;
+  margin: auto;
   height: 70%;
-  width: 1000px;
+  width: 70%;
+  margin-left: -60px;
   border-radius: 8px;
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -82,7 +84,7 @@ body {
 
   & .joke {
     display: flex;
-    padding: 25px 0 25px 15px;
+    padding: 25px 15px 25px 25px;
     border-bottom: 1px solid grey;
   }
 

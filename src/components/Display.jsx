@@ -12,21 +12,10 @@ export default class Display extends Component {
   }
 
   async componentDidMount() {
-    const options = {
-      method: 'GET',
-      url: 'https://dad-jokes.p.rapidapi.com/random/joke',
-      headers: {
-        'X-RapidAPI-Key': '81cb9a0ec2msh4302d1b19eaa7f8p184196jsn0e31a98787db',
-        'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
-      }
-    };
-
-    try {
-      const response = await axios.request(options);
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
+    const jokeData = await axios.get("https://icanhazdadjoke.com/")
+    .then((res) => {
+      console.log(res);
+    })
   }
 
   render() {
@@ -40,6 +29,11 @@ export default class Display extends Component {
           <button onClick={this.getJokes}>Get Jokes</button>
         </div>
         <div className="right-container">
+          <Joke />
+          <Joke />
+          <Joke />
+          <Joke />
+          <Joke />
           <Joke />
         </div>
       </div>

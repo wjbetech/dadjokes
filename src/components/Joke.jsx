@@ -5,18 +5,22 @@ export default class Joke extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      score: "10"
+      score: 1
     }
     this.handleAddScore = this.handleAddScore.bind(this);
     this.handleSubtractScore = this.handleSubtractScore.bind(this);
   }
 
   handleAddScore() {
-
+    this.setState((prevState) => ({
+      score: prevState.score += 1
+    }))
   }
 
   handleSubtractScore() {
-
+    this.setState((prevState) => ({
+      score: prevState.score -= 1
+    }))
   }
 
 
