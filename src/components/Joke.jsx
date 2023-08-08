@@ -4,38 +4,22 @@ export default class Joke extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      score: 1
-    }
-    this.handleAddScore = this.handleAddScore.bind(this);
-    this.handleSubtractScore = this.handleSubtractScore.bind(this);
+    this.state = {}
   }
-
-  handleAddScore() {
-    this.setState((prevState) => ({
-      score: prevState.score += 1
-    }))
-  }
-
-  handleSubtractScore() {
-    this.setState((prevState) => ({
-      score: prevState.score -= 1
-    }))
-  }
-
 
   render() {
     return (
       <div className="joke">
         <div className="score">
-          <i onClick={this.handleAddScore} className='bx bxs-up-arrow bx-sm'></i>
+          <i onClick={this.props.upvote} className='bx bxs-up-arrow bx-sm'></i>
           <div className="likes">
-            {this.state.score}
+            {this.props.votes}
           </div>
-          <i onClick={this.handleSubtractScore} className='bx bxs-down-arrow bx-sm'></i>
+          <i onClick={this.props.downvote} className='bx bxs-down-arrow bx-sm'></i>
         </div>
-        <div className="joke-content">
-          <p>{this.props.joke}</p>
+        <p className="joke-text">{this.props.joke}</p>
+        <div class="joke-emoji">
+          <span className="emoji-span">😀</span>
         </div>
       </div>
     )

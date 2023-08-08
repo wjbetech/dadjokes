@@ -30,12 +30,15 @@ body {
 
 .display {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 85%;
   height: 90vh;
   margin: 0 auto;
 }
 
 .left-container {
+  flex-direction: column;
   background-color: var(--purple);
   border-radius: 8px;
   width: 25%;
@@ -47,18 +50,21 @@ body {
 }
 
 .left-container {
+
   > h1 {
     padding: 4rem 0;
   }
+
   & .left-container-emoji {
     font-size: 100px;
-    padding: 5px;
+    padding: 0 5px 5px 5px;
     background-color: transparent;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 50%;
   }
+
   & button {
-    margin-top: 8rem;
+    margin-top: 10rem;
     font-family: 'Permanent Marker', cursive;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     background-color: var(--blue);
@@ -72,6 +78,7 @@ body {
 }
 
 .right-container {
+  flex-direction: column;
   color: var(--grey);
   margin: auto;
   height: 70%;
@@ -84,8 +91,10 @@ body {
 
   & .joke {
     display: flex;
-    padding: 25px 15px 25px 25px;
+    padding: 25px 15px 25px 30px;
     border-bottom: 1px solid grey;
+    align-items: center;
+    justify-content: center;
   }
 
   & .score {
@@ -111,17 +120,22 @@ body {
   & .likes {
     font-family: 'Poppins', sans-serif;
     border: 4px solid var(--pink);
-    height: 45px;
-    width: 60px;
-    padding-top: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 
-  & .joke-content {
-    margin-left: 1rem;
+  & .joke-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
   }
 
+  & .joke-emoji {
+    font-size: 3rem;
+    margin-left: auto;
+    padding: 0 0 0 50px
+  }
 }
