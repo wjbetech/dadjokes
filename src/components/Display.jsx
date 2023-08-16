@@ -78,7 +78,7 @@ export default class Display extends Component {
     if (this.state.loading) {
       return (
         <div className='JokeList-spinner'>
-          <i className='far fa-8x fa-laugh fa-spin' />
+          <i class='bx bx-loader bx-spin bx-rotate-180' ></i>
           <h1 className='JokeList-title'>Loading...</h1>
         </div>
       );
